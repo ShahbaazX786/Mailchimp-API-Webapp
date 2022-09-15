@@ -1,0 +1,7 @@
+#3324 
+    - I Went to bootstrap and then to bootstrap examples and then clicked on the signin form under custom snippets section
+    - Then Right clicked > View page source > and then copied the code and saved in my vs code editor by name signup.html.
+    - This copied code has no cdn so add the bootstrap cdn and add js script cdn just above the body end tag.
+    - This file also has css both external and internal so copy internal css and paste it into the styles.css.
+    - Now go to the bootstrap examples page where you copied the code by "view page source" then click on the dependable links like styles.css and svgs etc. and copy css/download svg under assets folder.
+    - Now link the files in the signup.html and run the file and voila you just made the page exactly like the one displayed on the bootstrap examples page with almost lesser effort.
