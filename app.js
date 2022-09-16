@@ -71,7 +71,8 @@ app.post('/',(req,res)=>{
         }
 
         response.on("data",(data)=>{
-            console.log(JSON.parse(data));
+            // console.log(JSON.parse(data));
+            console.log("yo boii");
         })
     });
 
