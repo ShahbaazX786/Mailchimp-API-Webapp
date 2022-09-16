@@ -21,6 +21,10 @@ app.get('/',(req,res)=>{
 });
 
 
+app.post('/home',(req,res)=>{
+    res.redirect("/");
+})
+
 
 app.post('/',(req,res)=>{
     const body=req.body;
@@ -59,10 +63,19 @@ app.post('/',(req,res)=>{
 
     // storing the result of the below function in the request variable
     const request = https.request(url, options, (response)=>{
+        if(response.statusCode === 200){
+            res.sendFile(__dirname+'/success.html');
+        }
+        else{
+            res.sendFile(__dirname+'/failure.html');
+        }
+
         response.on("data",(data)=>{
             console.log(JSON.parse(data));
         })
-    })
+    });
+
+
 
     request.write(jsonData); //running the jsonData on the request variable created above
     request.end(); //must end the api calls made to external apis to avoid any issues later on.
