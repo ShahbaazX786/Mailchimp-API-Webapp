@@ -5,3 +5,10 @@
     - This file also has css both external and internal so copy internal css and paste it into the styles.css.
     - Now go to the bootstrap examples page where you copied the code by "view page source" then click on the dependable links like styles.css and svgs etc. and copy css/download svg under assets folder.
     - Now link the files in the signup.html and run the file and voila you just made the page exactly like the one displayed on the bootstrap examples page with almost lesser effort.
+
+#3325
+    - Well, express server can send the requests based on the paths/routes (app.get,app.post etc) we wrote in app.js by using the res.sendFile() function.
+    - This res.sendFile function can fetch the links (<link href="xyz">) which are present on cdn/over the internet. But, the express can't fetch the static(style.css, icon.svg etc) files [static files means the files which just can be linked to the html file and these files do not change once we written them, we don't interact with them we only interact with the html file]
+    - so, to link the static files we need to use the special express function called 
+                - (app.use(express.static("static_folder_name")));
+    - And whatever the files we place in that folder all that files will be linked with the html file correctly via express server.
