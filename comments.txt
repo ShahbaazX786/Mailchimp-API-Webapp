@@ -12,3 +12,6 @@
     - so, to link the static files we need to use the special express function called 
                 - (app.use(express.static("static_folder_name")));
     - And whatever the files we place in that folder all that files will be linked with the html file correctly via express server.
+
+#3326
+    - while linking the static files in the html files remember to imagine that you are already in the public folder and just link styles.css in link tag if the css file is just inside the public folder.
