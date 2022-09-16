@@ -88,7 +88,7 @@ app.post('/',(req,res)=>{
 
 
 
-app.listen(3000, ()=>{
+app.listen(process.env.PORT || 3000, ()=>{ // proxess.env.PORT is useful then our app is deployed on the internet server and those servers can give random port numbers from 3000 to 5000 so using that process.env.PORT helps in that . And 5000 is used for running the server locally on our machine. If the port number 3000 is available then it will run in port 3000 else it will run on random port. that's what the line says.
     console.log("server started at port 3000 broo!!");
 });
 

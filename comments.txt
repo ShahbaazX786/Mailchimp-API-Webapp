@@ -15,3 +15,9 @@
 
 #3326
     - while linking the static files in the html files remember to imagine that you are already in the public folder and just link styles.css in link tag if the css file is just inside the public folder.
+
+#3327
+    - while deploying our app to heroku we can use the dev-center.heroku.com to follow the deployment step by step.
+    - also you need to install heroku cli on your machine and login to it using the heroku login.
+    - and you need to create a Procfile which has the commands which are executed when our app is run on heroku server. This file does'nt have any extension.
+    
